@@ -1,0 +1,38 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <PreferenceCategory app:title="KATEGORIE">
+        android:style="@style/SettingsStyle">
+        <ListPreference
+            android:title="Wybierz kategorie"
+            app:defaultValue="Other"
+            app:entries="@array/Categories"
+            app:entryValues="@array/Categories_values"
+            app:key="category_preference"
+            app:title="Wybierz kategorie"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="POWIADOMIENIA">
+        <ListPreference
+            android:title="Powiadomienia Czasowe"
+            app:defaultValue="5 min"
+            app:entries="@array/Notification"
+            app:entryValues="@array/Notification_values"
+            app:key="notification_preference"
+            app:title="Powiadomienia Czasowe"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="ZADANIE">
+        <SwitchPreferenceCompat
+            android:title="TaskOptions"
+            app:key="task_option_preference"
+            app:title="Skonczone zadania" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
